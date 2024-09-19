@@ -2,11 +2,12 @@ import multiprocessing
 import datetime
 def read_info(name):
     all_data = []
-    with open(name,'r',encoding='utf-8') as faile:
+    with open(name, 'r', encoding='utf-8') as faile:
         data = faile.readline()
         while data:
-            data = faile.readline()
             all_data.append(data)
+            data = faile.readline()
+
 
 filenames = [f'./file {number}.txt' for number in range(1, 5)]
 
